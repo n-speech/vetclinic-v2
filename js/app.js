@@ -82,7 +82,7 @@ function renderPetCard(pet) {
           <div class="pet-meta">${esc(pet.breed || pet.type)} · ${age}${pet.sex || ''}</div>
         </div>
         <div class="pet-actions">
-          <button class="icon-btn" onclick="openEditModal('${pet.id}')">✏️ Редактировать</button>
+          <button class="icon-btn" onclick="openEditModal('${pet.id}')">✏️</button>
           <button class="icon-btn danger" onclick="deletePet('${pet.id}')">🗑</button>
         </div>
       </div>
