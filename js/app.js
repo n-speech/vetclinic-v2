@@ -55,17 +55,17 @@ function renderPetCard(pet) {
     .sort((a, b) => new Date(a.date_next || '9999') - new Date(b.date_next || '9999'))
     .map(v => `
       <div class="vac-row-desktop">
-        <div style="font-size:13px;font-weight:500">${esc(v.name)}</div>
+        <div style="font-size:15px;font-weight:500">${esc(v.name)}</div>
         <div style="display:flex;align-items:center;gap:4px">
-          ${v.date_done ? `<span style="color:#1D9E75">✓</span><span style="font-size:13px;color:#374151">${fmtDate(v.date_done)}</span>` : ''}
+          ${v.date_done ? `<span style="color:#1D9E75">✓</span><span style="font-size:14px;color:#374151">${fmtDate(v.date_done)}</span>` : ''}
         </div>
-        <div>${v.date_next ? `<span class="badge badge-next" style="font-size:13px">↻ ${fmtDate(v.date_next)}</span>` : ''}</div>
+        <div>${v.date_next ? `<span class="badge badge-next" style="font-size:14px">↻ ${fmtDate(v.date_next)}</span>` : ''}</div>
       </div>
       <div class="vac-row-mobile">
         <div class="vac-mobile-name">${esc(v.name)}</div>
         <div class="vac-mobile-dates">
           ${v.date_done ? `<span class="vac-mobile-done"><span style="color:#1D9E75;font-size:14px;line-height:1">✓</span> ${fmtDate(v.date_done)}</span>` : ''}
-          ${v.date_next ? `<span class="badge badge-next vac-badge-mobile"><span class="vac-arrow">↻</span> ${fmtDate(v.date_next)}</span>` : ''}
+          ${v.date_next ? `<span class="badge badge-next vac-badge-mobile" style="font-size:14px"><span class="vac-arrow">↻</span> ${fmtDate(v.date_next)}</span>` : ''}
         </div>
       </div>`).join('');
 
